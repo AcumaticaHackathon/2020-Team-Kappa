@@ -1,3 +1,0 @@
-﻿<AutomationScreenField ScreenID="AR205000" TableName="CFBSM3TECH.CFSALESTARGETS" FieldName="USRYTDSALES" IsUserDefinedField="False">
-    <Prop Name="IsEnabled" DisplayName="Enabled" IsCustomized="True" Value="False" />
-</AutomationScreenField>

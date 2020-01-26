@@ -1,8 +1,0 @@
-﻿<AUFields screen="AR205000">
-    <AutomationScreenField ScreenID="AR205000" TableName="CFBSM3TECH.CFSALESTARGETS" FieldName="USRYTDSALES" IsUserDefinedField="False">
-        <Prop Name="IsEnabled" DisplayName="Enabled" IsCustomized="True" Value="False" />
-    </AutomationScreenField>
-    <AutomationScreenField ScreenID="AR205000" TableName="CFBSM3TECH.CFSALESTARGETS" FieldName="USRYTDBUGMARGIN" IsUserDefinedField="False">
-        <Prop Name="IsEnabled" DisplayName="Enabled" IsCustomized="True" Value="False" />
-    </AutomationScreenField>
-</AUFields>

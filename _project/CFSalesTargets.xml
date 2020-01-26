@@ -1,4 +1,0 @@
-﻿<Table TableName="CFSalesTargets">
-    <Column TableName="CFSalesTargets" ColumnName="UsrYTDSales" ColumnType="decimal" AllowNull="True" MaxLength="15" DecimalPrecision="2" DecimalLength="15" IsNewColumn="True" IsUnicode="True" />
-    <Column TableName="CFSalesTargets" ColumnName="UsrYTDBugMargin" ColumnType="decimal" AllowNull="True" MaxLength="5" DecimalPrecision="2" DecimalLength="5" IsNewColumn="True" IsUnicode="True" />
-</Table>
