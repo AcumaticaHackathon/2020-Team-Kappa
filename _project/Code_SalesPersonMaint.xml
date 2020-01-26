@@ -1,0 +1,72 @@
+﻿<Graph ClassName="SalesPersonMaint" Source="#CDATA" IsNew="True" FileType="ExistingGraph">
+    <CDATA name="Source"><![CDATA[using System;
+using System.Collections.Generic;
+using System.Collections;
+using PX.Data;
+using PX.Objects.CR;
+using PX.Objects;
+using PX.Objects.AR;
+
+using Comissions;
+
+namespace PX.Objects.AR
+{
+	public class SalesPersonMaint_Extension : PXGraphExtension<SalesPersonMaint>
+	{
+        public PXSelect<KPSalespersonDefaults,
+            Where<KPSalespersonDefaults.salespersonID, Equal<Current<SalesPerson.salesPersonID>>>> GroupDefaults;
+
+        public PXSelect<KPSalespersonSplits,
+        Where<KPSalespersonSplits.salespersonID, Equal<Current<SalesPerson.salesPersonID>>>> Splits;
+
+        public PXSelect<KPSalespersonSplits> OpenSplits;
+
+        protected void SalesPerson_UsrGroup_FieldUpdated(PXCache sender, PXFieldUpdatedEventArgs e)
+        {
+            
+            SalesPerson row = e.Row as SalesPerson;
+            SalesPersonExt ext = PXCache<SalesPerson>.GetExtension<SalesPersonExt>(row);
+
+            if (ext.UsrGroupType == "SP")
+            {
+                KPSalespersonSplits open = new KPSalespersonSplits();
+                open.SalespersonID = ext.UsrGroup;
+                open.GroupID = ext.UsrGroup;
+                open.MemberID = row.SalesPersonID;
+                this.OpenSplits.Update(open);
+            }
+        }
+
+        
+
+        protected void SalesPerson_RowSelected(PXCache sender, PXRowSelectedEventArgs e)
+        {
+            SalesPerson row = e.Row as SalesPerson;
+            if (row == null) return;            
+
+            SalesPersonExt ext = PXCache<SalesPerson>.GetExtension<SalesPersonExt>(row);            
+            if (ext.UsrGroupType == "GP")
+            {
+                this.GroupDefaults.Cache.AllowUpdate = true;
+                this.Splits.AllowSelect = true;
+                PXUIFieldAttribute.SetVisible<KPSalespersonSplits.memberID>(this.Splits.Cache, null, true);
+                PXUIFieldAttribute.SetVisible<KPSalespersonSplits.commisionPercent>(this.Splits.Cache, null, true);
+            }
+            else
+            {
+                this.GroupDefaults.Cache.AllowUpdate = false;
+                this.Splits.AllowSelect = false;
+                PXUIFieldAttribute.SetVisible<KPSalespersonSplits.memberID>(this.Splits.Cache, null, false);
+                PXUIFieldAttribute.SetVisible<KPSalespersonSplits.commisionPercent>(this.Splits.Cache, null, false);
+            }
+        }
+        
+
+        #region Event Handlers
+
+
+
+        #endregion
+    }
+}]]></CDATA>
+</Graph>

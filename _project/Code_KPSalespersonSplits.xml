@@ -1,0 +1,72 @@
+﻿<Graph ClassName="KPSalespersonSplits" Source="#CDATA" IsNew="True" FileType="NewDac">
+    <CDATA name="Source"><![CDATA[using System;
+using PX.Data;
+using PX.Objects.AR;
+
+namespace Comissions
+{
+	[Serializable]
+	[PXCacheName("KPSalespersonSplits")]
+	public class KPSalespersonSplits : IBqlTable
+	{
+		#region SalespersonID
+		[PXDBInt()]
+		[PXUIField(DisplayName = "Salesperson ID")]
+        [PXDBDefault(typeof(SalesPerson.salesPersonID))]
+        [PXParent(typeof(Select<SalesPerson,
+                Where<SalesPerson.salesPersonID, Equal<Current<KPSalespersonSplits.salespersonID>>>>))]
+        public virtual int? SalespersonID { get; set; }
+		public abstract class salespersonID : PX.Data.BQL.BqlInt.Field<salespersonID> { }
+		#endregion
+
+		#region LineNbr
+		[PXDBIdentity(IsKey = true)]
+		public virtual int? LineNbr { get; set; }
+		public abstract class lineNbr : PX.Data.BQL.BqlInt.Field<lineNbr> { }
+		#endregion
+
+		#region GroupID
+		[PXDBInt()]
+		[PXUIField(DisplayName = "Group ID", Enabled =false)]        
+        //[PXSelector(typeof(Search<SalesPerson.salesPersonID, Where<SalesPerson.isActive, Equal<True>>>),
+        //    typeof(SalesPerson.salesPersonCD),
+        //    typeof(SalesPerson.descr),
+        //    SubstituteKey = typeof(SalesPerson.salesPersonCD))]
+        public virtual int? GroupID { get; set; }
+		public abstract class groupID : PX.Data.BQL.BqlInt.Field<groupID> { }
+		#endregion
+
+		#region MemberID
+		[PXDBInt()]
+		[PXUIField(DisplayName = "Member ID", Enabled =false)]
+        [PXSelector(typeof(Search<SalesPerson.salesPersonID>),
+            typeof(SalesPerson.salesPersonCD),
+            typeof(SalesPerson.descr),
+            SubstituteKey = typeof(SalesPerson.salesPersonCD))]
+        public virtual int? MemberID { get; set; }
+		public abstract class memberID : PX.Data.BQL.BqlInt.Field<memberID> { }
+        #endregion
+
+        #region CommisionPercent    
+        public abstract class commisionPercent : PX.Data.IBqlField
+        {
+        }
+        protected decimal? _CommisionPercent;
+        [PXDBDecimal(5)]
+        [PXDefault(TypeCode.Decimal, "0.0")]
+        [PXUIField(DisplayName = "Commision Percent")]
+        public virtual decimal? CommisionPercent
+        {
+            get
+            {
+                return this._CommisionPercent;
+            }
+            set
+            {
+                this._CommisionPercent = value;
+            }
+        }
+        #endregion
+    }
+}]]></CDATA>
+</Graph>
