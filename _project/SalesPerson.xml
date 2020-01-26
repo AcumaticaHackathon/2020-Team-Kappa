@@ -1,4 +1,0 @@
-﻿<Table TableName="SalesPerson">
-    <Column TableName="SalesPerson" ColumnName="UsrGroupType" ColumnType="string" AllowNull="True" MaxLength="2" DecimalPrecision="0" DecimalLength="0" IsNewColumn="True" IsUnicode="True" />
-    <Column TableName="SalesPerson" ColumnName="UsrGroup" ColumnType="int" AllowNull="True" DecimalPrecision="0" DecimalLength="0" IsNewColumn="True" IsUnicode="True" />
-</Table>
