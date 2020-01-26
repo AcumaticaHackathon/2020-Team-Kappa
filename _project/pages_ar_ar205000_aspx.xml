@@ -3,112 +3,29 @@
         <Children Key="Items">
             <AddItem>
                 <PXTabItem TypeFullName="PX.Web.UI.PXTabItem">
-                    <Prop Key="Text" Value="Sales Targets" />
                     <Children Key="Template">
                         <AddItem>
                             <PXGrid TypeFullName="PX.Web.UI.PXGrid">
                                 <Prop Key="Virtual:ApplyStylesheetSkin" />
-                                <Prop Key="ID" Value="CstPXGrid1" />
                                 <Children Key="Levels">
                                     <AddItem>
                                         <PXGridLevel TypeFullName="PX.Web.UI.PXGridLevel">
-                                            <Prop Key="DataMember" Value="SalesTargets" />
                                             <Children Key="Columns">
                                                 <AddItem>
                                                     <PXGridColumn TypeFullName="PX.Web.UI.PXGridColumn">
-                                                        <Prop Key="DataField" Value="Year" />
-                                                        <Prop Key="Width" Value="70" />
-                                                        <Prop Key="Required" Value="True" />
-                                                        <Prop Key="MaxLength" Value="4" />
                                                     </PXGridColumn>
                                                 </AddItem>
                                                 <AddItem>
                                                     <PXGridColumn TypeFullName="PX.Web.UI.PXGridColumn">
-                                                        <Prop Key="DataField" Value="January" />
-                                                        <Prop Key="Width" Value="80" />
                                                     </PXGridColumn>
                                                 </AddItem>
                                                 <AddItem>
                                                     <PXGridColumn TypeFullName="PX.Web.UI.PXGridColumn">
-                                                        <Prop Key="DataField" Value="February" />
-                                                        <Prop Key="Width" Value="90" />
-                                                    </PXGridColumn>
-                                                </AddItem>
-                                                <AddItem>
-                                                    <PXGridColumn TypeFullName="PX.Web.UI.PXGridColumn">
-                                                        <Prop Key="DataField" Value="March" />
-                                                        <Prop Key="Width" Value="70" />
-                                                    </PXGridColumn>
-                                                </AddItem>
-                                                <AddItem>
-                                                    <PXGridColumn TypeFullName="PX.Web.UI.PXGridColumn">
-                                                        <Prop Key="DataField" Value="April" />
-                                                        <Prop Key="Width" Value="70" />
-                                                    </PXGridColumn>
-                                                </AddItem>
-                                                <AddItem>
-                                                    <PXGridColumn TypeFullName="PX.Web.UI.PXGridColumn">
-                                                        <Prop Key="DataField" Value="May" />
-                                                        <Prop Key="Width" Value="70" />
-                                                    </PXGridColumn>
-                                                </AddItem>
-                                                <AddItem>
-                                                    <PXGridColumn TypeFullName="PX.Web.UI.PXGridColumn">
-                                                        <Prop Key="DataField" Value="June" />
-                                                        <Prop Key="Width" Value="70" />
-                                                    </PXGridColumn>
-                                                </AddItem>
-                                                <AddItem>
-                                                    <PXGridColumn TypeFullName="PX.Web.UI.PXGridColumn">
-                                                        <Prop Key="DataField" Value="July" />
-                                                        <Prop Key="Width" Value="70" />
-                                                    </PXGridColumn>
-                                                </AddItem>
-                                                <AddItem>
-                                                    <PXGridColumn TypeFullName="PX.Web.UI.PXGridColumn">
-                                                        <Prop Key="DataField" Value="August" />
-                                                        <Prop Key="Width" Value="70" />
-                                                    </PXGridColumn>
-                                                </AddItem>
-                                                <AddItem>
-                                                    <PXGridColumn TypeFullName="PX.Web.UI.PXGridColumn">
-                                                        <Prop Key="DataField" Value="September" />
-                                                        <Prop Key="Width" Value="90" />
-                                                    </PXGridColumn>
-                                                </AddItem>
-                                                <AddItem>
-                                                    <PXGridColumn TypeFullName="PX.Web.UI.PXGridColumn">
-                                                        <Prop Key="DataField" Value="October" />
-                                                        <Prop Key="Width" Value="80" />
-                                                    </PXGridColumn>
-                                                </AddItem>
-                                                <AddItem>
-                                                    <PXGridColumn TypeFullName="PX.Web.UI.PXGridColumn">
-                                                        <Prop Key="DataField" Value="November" />
-                                                        <Prop Key="Width" Value="90" />
-                                                    </PXGridColumn>
-                                                </AddItem>
-                                                <AddItem>
-                                                    <PXGridColumn TypeFullName="PX.Web.UI.PXGridColumn">
-                                                        <Prop Key="DataField" Value="December" />
-                                                        <Prop Key="Width" Value="90" />
-                                                    </PXGridColumn>
-                                                </AddItem>
-                                                <AddItem>
-                                                    <PXGridColumn TypeFullName="PX.Web.UI.PXGridColumn">
-                                                        <Prop Key="DataField" Value="YearTotal" />
-                                                        <Prop Key="Width" Value="90" />
-                                                    </PXGridColumn>
-                                                </AddItem>
-                                                <AddItem>
-                                                    <PXGridColumn TypeFullName="PX.Web.UI.PXGridColumn">
-                                                        <Prop Key="DataField" Value="UsrYTDSales" />
                                                         <Prop Key="Width" Value="100" />
                                                     </PXGridColumn>
                                                 </AddItem>
                                                 <AddItem>
                                                     <PXGridColumn TypeFullName="PX.Web.UI.PXGridColumn">
-                                                        <Prop Key="DataField" Value="UsrYTDBugMargin" />
                                                         <Prop Key="Width" Value="100" />
                                                     </PXGridColumn>
                                                 </AddItem>
@@ -117,11 +34,6 @@
                                     </AddItem>
                                 </Children>
                                 <Prop Key="SkinID" Value="DetailsInTab" />
-                                <Prop Key="Height" Value="400px" />
-                                <Prop Key="Width" Value="100%" />
-                                <Prop Key="AutoAdjustColumns" Value="True" />
-                                <Children Key="ActionBar.CustomItems" />
-                                <Prop Key="Mode.AllowUpload" Value="True" />
                             </PXGrid>
                         </AddItem>
                     </Children>
