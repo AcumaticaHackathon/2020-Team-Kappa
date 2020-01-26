@@ -100,13 +100,25 @@
                                                         <Prop Key="Width" Value="90" />
                                                     </PXGridColumn>
                                                 </AddItem>
+                                                <AddItem>
+                                                    <PXGridColumn TypeFullName="PX.Web.UI.PXGridColumn">
+                                                        <Prop Key="DataField" Value="UsrYTDSales" />
+                                                        <Prop Key="Width" Value="100" />
+                                                    </PXGridColumn>
+                                                </AddItem>
+                                                <AddItem>
+                                                    <PXGridColumn TypeFullName="PX.Web.UI.PXGridColumn">
+                                                        <Prop Key="DataField" Value="UsrYTDBugMargin" />
+                                                        <Prop Key="Width" Value="100" />
+                                                    </PXGridColumn>
+                                                </AddItem>
                                             </Children>
                                         </PXGridLevel>
                                     </AddItem>
                                 </Children>
                                 <Prop Key="SkinID" Value="DetailsInTab" />
                                 <Prop Key="Height" Value="400px" />
-                                <Prop Key="Width" Value="85%" />
+                                <Prop Key="Width" Value="100%" />
                                 <Prop Key="AutoAdjustColumns" Value="True" />
                                 <Children Key="ActionBar.CustomItems" />
                                 <Prop Key="Mode.AllowUpload" Value="True" />
