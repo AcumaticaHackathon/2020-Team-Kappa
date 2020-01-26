@@ -1,0 +1,31 @@
+﻿<Graph ClassName="SalesPersonMaint" Source="#CDATA" IsNew="True" FileType="ExistingGraph">
+    <CDATA name="Source"><![CDATA[using System;
+using PX.Common;
+using System.Collections.Generic;
+using System.Collections;
+using PX.Data;
+using PX.Objects.CR;
+using PX.Objects;
+using PX.Objects.AR;
+using CFBSM3Tech;
+
+namespace PX.Objects.AR
+{
+  public class SalesPersonMaint_Extension : PXGraphExtension<SalesPersonMaint>
+  {
+    #region Event Handlers
+
+        //Setting up SalesTargets grid Data Member.
+        [PXImport(typeof(CFSalesTargets))]
+  public PXSelect<CFSalesTargets, Where<CFSalesTargets.salesPersonID, Equal<Current<SalesPerson.salesPersonID>>> > SalesTargets;
+
+        //Adding SalesTargets data Import to grid
+        //[PXViewName(Messages.CFSalesTargets)]
+
+        //[PXCopyPasteHiddenFields(typeof(CFSalesTargets.salesPersonID))]
+   //     public PXSelect<CFSalesTargets, Where<CFSalesTargets.salesPersonID, Equal<Current<SalesPerson.salesPersonID>>>> Transactions;
+
+        #endregion
+    }
+}]]></CDATA>
+</Graph>

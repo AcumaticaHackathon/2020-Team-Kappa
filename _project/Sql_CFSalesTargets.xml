@@ -1,0 +1,25 @@
+﻿<Sql TableName="CFSalesTargets" TableSchemaXml="#CDATA">
+    <CDATA name="TableSchemaXml"><![CDATA[<table name="CFSalesTargets">
+  <col name="CompanyID" type="Int" default="Zero" />
+  <col name="SalesTargetID" type="Int" identity="true" />
+  <col name="SalesPersonID" type="Int" />
+  <col name="year" type="Int" />
+  <col name="January" type="Decimal(9,2)" nullable="true" />
+  <col name="February" type="Decimal(9,2)" nullable="true" />
+  <col name="March" type="Decimal(9,2)" nullable="true" />
+  <col name="April" type="Decimal(9,2)" nullable="true" />
+  <col name="May" type="Decimal(9,2)" nullable="true" />
+  <col name="June" type="Decimal(9,2)" nullable="true" />
+  <col name="July" type="Decimal(9,2)" nullable="true" />
+  <col name="August" type="Decimal(9,2)" nullable="true" />
+  <col name="September" type="Decimal(9,2)" nullable="true" />
+  <col name="October" type="Decimal(9,2)" nullable="true" />
+  <col name="November" type="Decimal(9,2)" nullable="true" />
+  <col name="December" type="Decimal(9,2)" nullable="true" />
+  <col name="YearTotal" type="Decimal(12,2)" nullable="true" />
+  <index name="CFSalesTargets_PK" clustered="true" primary="true" unique="true">
+    <col name="CompanyID" />
+    <col name="SalesTargetID" />
+  </index>
+</table>]]></CDATA>
+</Sql>
